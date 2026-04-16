@@ -7,6 +7,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import DropDownBox from "./DropDownBox";
 import SideBar from "./SideBar";
 import { RxHamburgerMenu } from "react-icons/rx";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const { user, isAuthenticated } = useSelector((state) => state.checkAuth);
@@ -72,11 +73,20 @@ const Header = () => {
     <header
       className={`flex justify-between items-center sticky top-0 px-8 py-4 border-b border-gray-200 ${lightBgColor} shadow-sm z-10`}
     >
-      <div className="flex items-center space-x-6">
-        <Link to="/" className="text-2xl font-bold tracking-tight">
-          skill<span className="text-orange-500">X</span>change
-        </Link>
-      </div>
+      <div className="flex items-center">
+  <Link to="/" className="flex items-center space-x-3 group">
+    {/* The Logo Icon */}
+    <img 
+      src={logo}
+      alt="skillXchange Logo" 
+      className="w-10 h-10 object-contain transition-transform duration-200 group-hover:scale-110"
+    />
+    {/* The Text */}
+    <span className="text-2xl font-bold tracking-tight text-gray-900">
+      skill<span className="text-orange-500">X</span>change
+    </span>
+  </Link>
+</div>
 
       {!isAuthenticated ? (
         <div className="flex space-x-3">
