@@ -1,8 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+const BASE = import.meta.env.VITE_API_URL;
 
 // Thunk to verify authentication
 export const authVerify = createAsyncThunk('checkAuth/authVerify', async () => {
-    const res = await fetch('http://localhost:3000/api/auth/check', {
+    const res = await fetch(`${BASE}/api/auth/check`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

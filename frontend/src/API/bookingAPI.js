@@ -1,7 +1,7 @@
 const BASE = import.meta.env.VITE_API_URL;
 
 export const createBooking = async (bookingData) => {
-  const res = await fetch("http://localhost:3000/api/booking/create", {
+  const res = await fetch(`${BASE}/api/booking/create`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
