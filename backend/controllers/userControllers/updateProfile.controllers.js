@@ -24,7 +24,7 @@ const updateProfile = async (req, res) => {
     if (req.file) {
       const result = await new Promise((resolve, reject) => {
         const stream = cloudinary.uploader.upload_stream(
-          { folder: "profile_pics" },
+          { folder: "skillXchange_profile_pics" },
           (error, result) => {
             if (error) reject(error);
             else resolve(result);
