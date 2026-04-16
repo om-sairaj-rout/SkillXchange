@@ -9,8 +9,8 @@ import EditProfile from "../pages/Edit";
 import SkillConnect from "../pages/SkillConnect";
 import Connections from "../pages/Connections";
 import Session from "../pages/Session";
-import ChatsPage from "../pages/chats";
-import LeaderboardPage from "../pages/leaderboard";
+// import ChatsPage from "../pages/chats";
+// import LeaderboardPage from "../pages/leaderboard";
 import Layout from "../pages/Layout";
 import Home from "../pages/Home";
 import App from "../pages/App";
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
       {path: '/skillConnect', element: <SkillConnect />},
       {path: '/connections', element: <Connections />},
       {path: '/session', element: <Session />},
-      {path: '/chats', element: <ChatsPage />},
-      {path: '/leaderboard', element: <LeaderboardPage />},
+      // {path: '/chats', element: <ChatsPage />},
+      // {path: '/leaderboard', element: <LeaderboardPage />},
     ],
   }
 ]);
