@@ -1,11 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-function connectToDB(){
-    mongoose.connect(process.env.MONGO_URL)
+function connectToDB() {
+    mongoose.connect(process.env.MONGO_URL, {
+        serverSelectionTimeoutMS: 5000,
+    })
     .then(() => {
-        console.log('databse is connected');
-    }).catch(err => {
-        console.error('DB connection error:', err);
+        console.log("database is connected");
+    })
+    .catch((err) => {
+        console.error("DB connection error:", err.message);
     });
 }
 
