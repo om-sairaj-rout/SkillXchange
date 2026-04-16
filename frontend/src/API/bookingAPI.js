@@ -1,4 +1,4 @@
-const BASE = "http://localhost:3000";
+const BASE = import.meta.env.VITE_API_URL;
 
 export const createBooking = async (bookingData) => {
   const res = await fetch("http://localhost:3000/api/booking/create", {

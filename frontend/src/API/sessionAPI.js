@@ -1,8 +1,9 @@
 // ... your other API functions
+const BASE = import.meta.env.VITE_API_URL;
 
 export const confirmSession = async (sessionId, userId, confirmationData) => {
   try {
-    const response = await fetch(`http://localhost:3000/api/confirm/${sessionId}/${userId}`, {
+    const response = await fetch(`${BASE}/api/confirm/${sessionId}/${userId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

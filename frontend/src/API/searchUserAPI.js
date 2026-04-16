@@ -1,4 +1,4 @@
-const BASE = "http://localhost:3000";
+const BASE = import.meta.env.VITE_API_URL;
 
 export const searchTeacher = async (Data) => {
     const params = new URLSearchParams(Data).toString(); // ✅ convert object to query string
