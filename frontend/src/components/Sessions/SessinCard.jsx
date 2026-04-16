@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { confirmSession } from "../../API/sessionAPI";
-import ProfilePicture from "../../assets/Profile.jpg";
 import { FaCalendarAlt, FaCheckCircle, FaClock, FaEdit, FaHourglassHalf, FaStar, FaVideo } from "react-icons/fa";
 
 const SessionCard = ({

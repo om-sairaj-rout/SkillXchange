@@ -1,7 +1,6 @@
 // src/components/BookingModal.jsx
 
 import { useEffect, useState } from "react";
-import ProfilePicture from "../../assets/Profile.jpg";
 import { IconTimesCircle } from "../../pages/Connections";
 import { useSelector } from "react-redux";
 import { createBooking } from "../../API/bookingAPI";
